@@ -1,0 +1,29 @@
+{
+  "name": "youtube-trend-finder",
+  "version": "1.0.0",
+  "description": "Ferramenta para descobrir vídeos em tendência no YouTube por nicho específico",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "npx http-server",
+    "build": "echo 'Projeto é estático, não necessita build'"
+  },
+  "keywords": [
+    "youtube",
+    "trends",
+    "tendências",
+    "vídeos",
+    "análise",
+    "content-creation"
+  ],
+  "author": "CECM",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seu-usuario/youtube-trend-finder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/seu-usuario/youtube-trend-finder/issues"
+  },
+  "homepage": "https://github.com/seu-usuario/youtube-trend-finder#readme"
+}

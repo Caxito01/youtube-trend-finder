@@ -1,0 +1,24 @@
+# Node modules
+node_modules/
+npm-debug.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+.env
+
+# Dependências (se usar)
+package-lock.json
+yarn.lock
+
+# Cache
+.cache/
+dist/
+build/

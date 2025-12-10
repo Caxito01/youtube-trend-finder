@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Trend Finder - Encontre Vídeos Trending</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23FF0000' width='100' height='100'/%3E%3Cpath fill='white' d='M35 25c-5.5 0-10 4.5-10 10v40c0 5.5 4.5 10 10 10h40c5.5 0 10-4.5 10-10V35c0-5.5-4.5-10-10-10H35zm28 22l-18 13v-26l18 13z'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>
+                <span>📊</span>
+                YouTube Trend Finder
+                <span>🔥</span>
+            </h1>
+            <p>Fique no topo: descubra os vídeos em alta no seu nicho e saia na frente no YouTube.</p>
+        </div>
+
+        <!-- Main Card -->
+        <div class="main-card">
+            <h3 class="section-title">
+                <span>🎯</span>
+                Selecione seu Nicho
+            </h3>
+
+            <div class="alert alert-error" id="errorAlert"></div>
+            <div class="alert alert-info" id="infoAlert"></div>
+
+            <!-- Niches Grid -->
+            <div class="niches-grid">
+                <div class="niche-btn" data-niche="Marketing Digital">📱 Marketing Digital</div>
+                <div class="niche-btn" data-niche="Tecnologia">💻 Tecnologia</div>
+                <div class="niche-btn" data-niche="Fitness">💪 Fitness</div>
+                <div class="niche-btn" data-niche="Finanças">💰 Finanças</div>
+                <div class="niche-btn" data-niche="Culinária">🍳 Culinária</div>
+                <div class="niche-btn" data-niche="Gaming">🎮 Gaming</div>
+                <div class="niche-btn" data-niche="Educação">📚 Educação</div>
+                <div class="niche-btn" data-niche="Entretenimento">🎬 Entretenimento</div>
+                <div class="niche-btn" data-niche="Negócios">💼 Negócios</div>
+                <div class="niche-btn" data-niche="Vlogs">📹 Vlogs</div>
+                <div class="niche-btn" data-niche="Música">🎵 Música</div>
+                <div class="niche-btn" data-niche="Arte">🎨 Arte</div>
+                <div class="niche-btn" data-niche="Desenvolvimento Web">🌐 Web</div>
+                <div class="niche-btn" data-niche="Design">🖌️ Design</div>
+            </div>
+
+            <!-- Custom Niche -->
+            <div class="form-group">
+                <label>Ou digite seu nicho personalizado:</label>
+                <input type="text" id="customNiche" placeholder="Ex: Yoga para iniciantes, Receitas veganas...">
+            </div>
+
+            <!-- API Key Configuration -->
+            <div class="form-group">
+                <label>Chave da YouTube API (opcional para dados reais):</label>
+                <input type="password" id="apiKey" placeholder="Cole sua Google API Key aqui">
+                <small style="color: #999; margin-top: 5px; display: block;">
+                    <a href="https://console.cloud.google.com/apis/credentials" target="_blank" style="color: #FF0000; text-decoration: none;">
+                        Obter chave →
+                    </a>
+                </small>
+            </div>
+
+            <!-- Search Button -->
+            <button class="btn-search" id="searchBtn" onclick="searchTrends()">
+                <span id="btnText">🔍 Buscar Tendências</span>
+            </button>
+        </div>
+
+        <!-- Results Section -->
+        <div class="results-section" id="resultsSection">
+            <div class="main-card">
+                <div class="result-header">
+                    <h2 id="resultNiche">Análise de Tendências</h2>
+                    <p>Dados dos últimos 2 dias</p>
+                </div>
+
+                <!-- Trending Topics -->
+                <div class="trending-topics" id="trendingTopics" style="display:none;">
+                    <h3>🔥 Tópicos em Alta</h3>
+                    <div class="topic-tags" id="topicTags"></div>
+                </div>
+
+                <!-- Insights -->
+                <div class="insights-box" id="insightsBox" style="display:none;">
+                    <h3>💡 Insights e Análise</h3>
+                    <p id="insightsText"></p>
+                </div>
+
+                <!-- Videos Grid -->
+                <div id="videosContainer">
+                    <h3 class="section-title">
+                        <span>🎥</span>
+                        Vídeos Trending Encontrados
+                    </h3>
+                    <div class="videos-grid" id="videosGrid"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>💡 Ferramenta baseada nas tendências do mercado • Powered by CECM</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
